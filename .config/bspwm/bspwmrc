@@ -1,6 +1,6 @@
 #! /bin/bash
-gap=10
-PANEL_HEIGHT=30
+gap=4
+PANEL_HEIGHT=25
 BORDER_WIDTH=2
 export gap
 export PANEL_HEIGHT
@@ -8,19 +8,25 @@ export BORDER_WIDTH
 
 #АВТОСТАРТ
 sxhkd &
-nm-applet &
 numlockx &
 polybar david &
 setxkbmap us,ru -option 'grp:alt_shift_toggle'
 picom -b &
-feh --bg-scale ~/Pictures/green_sky.jpg
+feh --bg-scale /home/david/Pictures/green_sky.jpg
 xsetroot -cursor_name left_ptr &
 pgrep -x panel > /dev/null || panel &
 #kilall btops
 #btops &
 
 #РАБОЧИЕ СТОЛЫ
-bspc monitor -d 1 2 3 4 5 6
+bspc monitor -d 1 2 3 4 5 6 7 8 9
+
+# For smart gaps
+bspc config single_monocle true
+bspc config gapless_monocle true
+
+# Monocle mode, when only 1 window opened
+#bspc config single_monocle false
 
 #РАМКИ И ОТСТУПЫ
 bspc config border_width $BORDER_WIDTH
@@ -45,9 +51,6 @@ bspc config split_ratio          0.5
 #ФОКУС ОКНА НАВЕДЕНИЕМ КУРСОРА
 bspc config focus_follows_pointer true
 bspc config pointer_modifier	  super
-
-#РЕЖИМ МОНОКЛЯ КОГДА ОТКРЫТО ОДНО ОКНО
-bspc config single_monocle	  false
 
 #ОТКЛЮЧЕНИЕ ГАПСОВ РАМОК И ОТСТУПОВ КОГДА ОТКРЫТО ОДНО ОКНО
 #bspc config borderless_monocle   false

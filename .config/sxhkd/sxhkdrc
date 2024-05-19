@@ -3,7 +3,7 @@
 ###########################################
 
 super + d
-       rofi -show run
+       dmenu_run
 
 super + Return
        kitty
@@ -19,12 +19,6 @@ super + F1
 
 super + ctrl + l
        betterlockscreen -l
-
-super + p
-       pcmanfm
-
-super + ctrl + g
-       galculator
 
 ###########################################
 ####          УПРАВЛЕНИЕ BSPWM         ####
@@ -61,8 +55,6 @@ super + y
 super + g
 	bspc node -s biggest.window
 
-
-
 ###########################################
 ####         УПРАВЛЕНИЕ ФЛАГАМИ        ####
 ###########################################
@@ -75,8 +67,6 @@ super + {t,shift + t,s,f}
 super + ctrl + {m,x,y,z}
 	bspc node -g {marked,locked,sticky,private}
 
-
-
 ###########################################
 ####         УПРАВЛЕНИЕ ФОКУСОМ        ####
 ###########################################
@@ -86,13 +76,22 @@ super + {_,shift + }{Left,Down,Up,Right}
 	bspc node -{f,s} {west,south,north,east}
 #НАСТРОИТЬ ЗВУК
 XF86AudioRaiseVolume
-        pactl set-sink-volume @DEFAULT_SINK@ +1%
+        pactl set-sink-volume @DEFAULT_SINK@ +3%
 
 XF86AudioLowerVolume
-        pactl set-sink-volume @DEFAULT_SINK@ -1%
+        pactl set-sink-volume @DEFAULT_SINK@ -3%
 
 XF86AudioMute
         pactl set-sink-volume @DEFAULT_SINK@ toggle
+
+Xf86AudioPlay
+		playerctl play-pause
+
+XF86AudioPrev
+		playerctl prev
+
+XF86AudioNext
+		playerctl next
 
 #ВЫДЕЛИТЬ НЕСКОЛЬКО ПРИЛОЖЕНИЙ НАПРИМЕР ЧТО БЫ ПЕРЕМЕСТИТЬ ГРУППУ ПРИЛОЖЕНИЙ НА ДРУГОЙ ВОРКСПЕЙС
 super + {p,b,comma,period}
