@@ -886,6 +886,8 @@ static const char *nexttrack[] = { "playerctl", "next", NULL };
 static const char *play_pause[] = { "playerctl", "play-pause", NULL };
 
 //Power
+static const char *sys_off[] = { "bash", "-i", "-c", "poweroff", NULL };
+static const char *sys_reboot[] = { "bash", "-i", "-c", "reboot", NULL };
 
 #if BAR_STATUSCMD_PATCH
 #if BAR_DWMBLOCKS_PATCH
@@ -930,6 +932,9 @@ static const Key keys[] = {
 	{ MODKEY,	XK_F1,  spawn,    {.v = browser } },
 	// System
 	{ MODKEY,	XK_z,	spawn,    {.v = scr_lock } },
+	// Power
+	{ MODKEY,       XK_Escape,   spawn,   {.v = sys_off } },
+	{ MODKEY|ShiftMask,   XK_Escape,   spawn,   {.v = sys_reboot } },
 	#if RIODRAW_PATCH
 	{ MODKEY|ControlMask,           XK_p,          riospawnsync,           {.v = dmenucmd } },
 	{ MODKEY|ControlMask,           XK_Return,     riospawn,               {.v = termcmd } },
