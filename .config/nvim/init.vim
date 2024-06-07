@@ -18,7 +18,7 @@ Plug 'https://github.com/rafi/awesome-vim-colorschemes'
 Plug 'https://github.com/ryanoasis/vim-devicons'
 Plug 'https://github.com/terryma/vim-multiple-cursors'
 Plug 'https://github.com/preservim/tagbar'
-Plug 'https://github.com/neoclide/coc.nvim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'https://github.com/Dinduks/vim-java-get-set'
 Plug 'https://github.com/Raimondi/delimitMate'
 

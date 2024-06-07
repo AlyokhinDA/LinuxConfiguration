@@ -872,22 +872,23 @@ static const char *dmenucmd[] = {
 static const char *termcmd[]  = { "kitty", NULL }; // Terminal
 
 //Applications
-static const char *browser[] = { "firefox", NULL };
+static const char *browser[] = { "waterfox", NULL };
 static const char *scr_cptr[] = { "flameshot", "gui", NULL };
 //System
 static const char *scr_lock[] = { "betterlockscreen", "-l", NULL };
+static const char *appmenu[] = { "jgmenu_run", NULL };
 //Sound
 #include <X11/XF86keysym.h>
-static const char *upvol[] = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "+3%", NULL };
-static const char *downvol[] = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "-3%", NULL };
+static const char *upvol[] = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "+1%", NULL };
+static const char *downvol[] = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "-1%", NULL };
 static const char *mutevol[] = { "pactl", "set-sink-mute", "@DEFAULT_SINK@", "toggle", NULL };
 static const char *prevtrack[] = { "playerctl", "prev", NULL };
 static const char *nexttrack[] = { "playerctl", "next", NULL };
 static const char *play_pause[] = { "playerctl", "play-pause", NULL };
 
 //Power
-static const char *sys_off[] = { "bash", "-i", "-c", "poweroff", NULL };
-static const char *sys_reboot[] = { "bash", "-i", "-c", "reboot", NULL };
+static const char *sys_off[] = { "zsh", "-i", "-c", "poweroff", NULL };
+static const char *sys_reboot[] = { "zsh", "-i", "-c", "reboot", NULL };
 
 #if BAR_STATUSCMD_PATCH
 #if BAR_DWMBLOCKS_PATCH
@@ -932,6 +933,7 @@ static const Key keys[] = {
 	{ MODKEY,	XK_F1,  spawn,    {.v = browser } },
 	// System
 	{ MODKEY,	XK_z,	spawn,    {.v = scr_lock } },
+	{ MODKEY|ControlMask,	XK_j,	spawn,	 {.v = appmenu } },
 	// Power
 	{ MODKEY,       XK_Escape,   spawn,   {.v = sys_off } },
 	{ MODKEY|ShiftMask,   XK_Escape,   spawn,   {.v = sys_reboot } },
