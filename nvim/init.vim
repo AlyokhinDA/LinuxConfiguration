@@ -20,6 +20,7 @@ Plug 'https://github.com/terryma/vim-multiple-cursors'
 Plug 'https://github.com/preservim/tagbar'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'https://github.com/Dinduks/vim-java-get-set'
+Plug 'https://github.com/vim-vdebug/vdebug'
 Plug 'https://github.com/Raimondi/delimitMate'
 
 nmap <F8> :TagbarToggle<CR>
