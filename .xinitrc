@@ -11,3 +11,4 @@ picom -b &
 feh --bg-scale ~/Pictures/green_sky.jpg &
 slstatus &
 dwm
+#startxfce4
