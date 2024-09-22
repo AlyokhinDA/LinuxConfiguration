@@ -922,12 +922,12 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_p,          spawn,                  {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return,     spawn,                  {.v = termcmd } },
 	// Sound
-	{ 0,	XF86XK_AudioRaiseVolume,	spawn,    {.v = upvol } },
-	{ 0,	XF86XK_AudioLowerVolume,	spawn,    {.v = downvol } },
-	{ 0,	XF86XK_AudioMute,	spawn,    {.v = mutevol } },
-	{ 0,	XF86XK_AudioPrev,	spawn,    {.v = prevtrack } },
-	{ 0,	XF86XK_AudioNext,	spawn,	  {.v = nexttrack } },
-	{ 0,	XF86XK_AudioPlay,	spawn,    {.v = play_pause } },
+	{ 0,	0x1008FF13,	spawn,    {.v = upvol } },
+	{ 0,	0x1008FF11,	spawn,    {.v = downvol } },
+	{ 0,	0x1008FF12,	spawn,    {.v = mutevol } },
+	{ 0,	0x1008FF16,	spawn,    {.v = prevtrack } },
+	{ 0,	0x1008FF17,	spawn,	  {.v = nexttrack } },
+	{ 0,	0x1008FF14,	spawn,    {.v = play_pause } },
 	// Applications
 	{ 0,	XK_Print,	spawn,    {.v = scr_cptr } },
 	{ MODKEY,	XK_F1,  spawn,    {.v = browser } },
