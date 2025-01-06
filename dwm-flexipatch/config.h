@@ -869,7 +869,7 @@ static const char *dmenucmd[] = {
 	#endif // BAR_DMENUMATCHTOP_PATCH
 	NULL
 };
-static const char *termcmd[]  = { "kitty", NULL }; // Terminal
+static const char *termcmd[]  = { "alacritty", NULL }; // Terminal
 
 //Applications
 static const char *browser[] = { "waterfox", NULL };
